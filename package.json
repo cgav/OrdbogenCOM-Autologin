@@ -1,0 +1,27 @@
+{
+  "name": "ordbogen-com-autologin",
+  "description": "A Chrome extension that automatically logs the user in to www.ordbogen.com",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm run prepare && webpack -d --watch",
+    "build": "npm run prepare && webpack -p",
+    "prepare": "npm run clean && node scripts/create_manifest.js && cp -Rf src/assets build/assets && cp -Rf src/*.html build/",
+    "clean": "rm -rf build"
+  },
+  "repository": "https://github.com/cgav/OrdbogenCOM-Autologin.git",
+  "author": "Constantin Gavrilete <c.gavrilete@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "json-loader": "^0.5.4",
+    "mkdirp": "^0.5.1",
+    "webpack": "^1.14.0"
+  },
+  "chrome-manifest": {
+    "name": "Ordbogen.com Autologin",
+    "description": "A Chrome extension that automatically logs the user in to www.ordbogen.com"
+  }
+}
