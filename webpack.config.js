@@ -3,7 +3,6 @@ const envs = require('./envs.json');
 
 module.exports = {
   entry: {
-    popup: ['babel-polyfill', './src/popup.js'],
     background: ['babel-polyfill', './src/background.js'],
     content: ['babel-polyfill', './src/content.js']
   },

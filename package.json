@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm run prepare && webpack -d --watch",
     "build": "npm run prepare && webpack -p",
-    "prepare": "npm run clean && node scripts/create_manifest.js && cp -Rf src/assets build/assets && cp -Rf src/*.html build/",
+    "prepare": "npm run clean && node scripts/create_manifest.js && cp -Rf src/assets build/assets",
     "clean": "rm -rf build"
   },
   "repository": "https://github.com/cgav/OrdbogenCOM-Autologin.git",
